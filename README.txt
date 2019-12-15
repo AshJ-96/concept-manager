@@ -1,42 +1,37 @@
-Kate Higgins
-concept Manager Application
-StudentNo: 20075687
-Mobile Appp Development 
-Bitbucket: https://bitbucket.org/kateh101/repoo/src/master/
-Youtube Link: https://youtu.be/Vd1jJlm4hQo
-(Video also in folder if any issues)
+Ashley Jarman
+Concept Manager App
+StudentNo: 20076649
+Mobile App Development 
 
 DESCRIPTION
-I have designed my application to function as a concept manager (ie. Trello) to organize concepts in order of urgency.
-I have included an Image button as I moved on in the labs but, I wish for this to be included in the second assignment. 
-You have the ability to add, save, update, and delete concepts freely in this application. Working through the labs got me as far as adding
-and listing placemarks and the rest was done using tutorials and applying the knowledge I gained in the labs to make CRUD functionality.
-
+This app is a place to temporarily record Ideas, the fiery colour scheme is in order to induce a sense of passion within the user. there is also the option to add an image for better commincation of the concept or inspiration.
 
 FUNCTIONS 
+Splash Screen:
+A simple delay of a few seconds, like a loading screen, upon opening which gives the user information on the app.
+
+"Placemark" storage
+1. Using JSON store the cards are now kept even when the app is closed.
+
 Delete Button: 
-1. Added delete method to the store interface 
-2. Override it in the JSON store 
-3. In the override, call concepts.remove(concept) then serialize()
-3.remove concept from list of concepts, Save new list to JSON file
-4.add delete button in activity_concept.xml
+1. Added delete option for the cards/ideas the user records.
+2. Override-JSON store 
+3. override call concepts.remove(concept) then serialize()
+3.remove the card from the array, and save the new list to JSON file, to make it perminent.
+4.add delete button in the .xml for user interface
 5. Set button onClickListener to call app.concepts.delete(concept), setResult(RESULT_OK) THEN FINISH()
 this deletes the concept and returns to main activity
 
-Splash Screen:
-This creates a concept which runs as a fixed delay. The concept being the intent for the next screen.
-It also calls finish after launching the intent so the splash screen wont show up in the back history
-IE:pressing back wont bring you back to the splash screen.
+
 
 Spinner:
-This was done by creating an array in my concept_activity,
-create a new item.view in the concept listener (concept adapter)
-Declare the spinner in activity_concept
-adjust layout in card_concept.xml
+simple drop down to say how the progress is going on the idea.
 
 
 REFERENCES: 
 youtube tutorials::
 
-Startup Activity (which i used to assist in my making of the splash screen) : https://www.youtube.com/watch?v=DflrLDLfzsU&fbclid=IwAR0lWPt6LOEhI1S3pwp_IWRGQrgMsHblwf5oPK3J_yt0v2_tPrMK83VpVK4
-Spinner: https://www.youtube.com/watch?v=IfM7Wc9iKV8&fbclid=IwAR0j7jjerqPyPZ7APcwlvlswbdt1i-LdEnXVB8bCb45FEXpe37uOMAer7WA
+https://firebase.google.com/products#develop-products
+https://code.luasoftware.com/tutorials/android/android-spinner-tutorial/
+https://kotlinlang.org/docs/tutorials/native/basic-kotlin-native-app.html
+https://developer.android.com/kotlin/?gclid=Cj0KCQiA0NfvBRCVARIsAO4930nrH-bSJJr-D2vDITiTV_4XUAxmnkMci6kSj_Qw64n6RmWYfLNApd8aAkFqEALw_wcB
